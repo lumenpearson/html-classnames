@@ -1,17 +1,17 @@
-# Часто используемые имена классов в HTML-разметке
+# Frequently Used Class Names in HTML Markup
 
-## Общие правила
-- в имени класса не стоит использовать цифры
+## Fork by ![**@LexPearson**](https://github.com/lexpearson) from ![**aleksanderlamkov/html-classnames**](https://github.com/aleksanderlamkov/html-classnames) <br><br>General Rules
+- Avoid using numbers in class names.
     ```html
-    <!-- ❌ Неправильно -->
+    <!-- ❌ Incorrect -->
     <div class="element-1">...</div>
     
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <div class="first-element">...</div>
     ```
-- имя класса лучше писать в нижнем регистре в `kebab-case` нотации, где каждое слово разделено символом дефиса
+- Write class names in lowercase using `kebab-case` notation, where each word is separated by a hyphen.
     ```html
-    <!-- ❌ Неправильно -->
+    <!-- ❌ Incorrect -->
     <div class="userinfo">...</div>
     <div class="Userinfo">...</div>
     <div class="userInfo">...</div>
@@ -20,134 +20,135 @@
     <div class="USER-INFO">...</div>
     <div class="USER_INFO">...</div>
 
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <div class="user-info">...</div>
     ```
-- имя класса не должно состоять из одной буквы
+- Class names should not consist of a single letter.
     ```html
-    <!-- ❌ Неправильно -->
+    <!-- ❌ Incorrect -->
     <div class="w">...</div>
 
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <div class="wrapper">...</div>
     ```
-- в имени класса не стоит злоупотреблять сокращениями: лучше написать `button` вместо `btn` и `link` вместо `lnk` (помните – код мы пишем один раз, а читать его мы и другие разработчики будем гораздо чаще, так что экономить буквы не стоит)
+- Avoid excessive abbreviations in class names; use `button` instead of `btn` and `link` instead of `lnk`. Remember, code is written once, but read by you and other developers much more often, so saving characters is not advisable.
     ```html
-    <!-- ❌ Неправильно -->
+    <!-- ❌ Incorrect -->
     <button class="btn">...</button>
     <a class="lnk">...</a>
 
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <button class="button">...</button>
     <a class="link">...</a>
     ```
-- имя класса в большинстве случаев не должно дублировать имя тега элемента, к которому класс применяется
+- In most cases, class names should not duplicate the tag name of the element to which the class is applied.
     ```html
-    <!-- ❌ Неправильно -->
+    <!-- ❌ Incorrect -->
     <p class="p">...</p>
     <div class="div">...</div>
     <a class="a">...</a>
 
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <p class="paragraph">...</p>
     <div class="wrapper">...</div>
     <a class="link">...</a>
     ```
-- имя класса элемента в целом должно отражать его функцию или стиль
+- Class names should generally reflect the function or style of the element.
     ```html
-    <!-- ❌ Неправильно -->
-    <button class="some-button">Красная кнопка</button>
-    <div class="some-block">Тултип</div>
+    <!-- ❌ Incorrect -->
+    <button class="some-button">Red Button</button>
+    <div class="some-block">Tooltip</div>
 
-    <!-- ✅ Правильно -->
-    <button class="red-button">Красная кнопка</button>
-    <div class="tooltip">Тултип</div>
+    <!-- ✅ Correct -->
+    <button class="red-button">Red Button</button>
+    <div class="tooltip">Tooltip</div>
     ```
-- имя класса может состоять из нескольких слов, по количеству – без ограничений, однако логично, что чем меньше слов в имени класса, тем проще его написать, прочесть и запомнить
+- Class names can consist of multiple words; however, it is logical that the fewer words in a class name, the easier it is to write, read, and remember.
     ```html
-    <!-- ✅ Допустимо -->
+    <!-- ✅ Acceptable -->
     <span class="user-name-first-letter">A</span>
     ```
-- в именах классов можно и нужно комбинировать слова, если этого требует контекст элемента (например, блок с классом `user` может содержать внутри себя блоки с классами `user-image` и `user-name`, а `user-name` может содержать, например, элемент с классом `user-name-first-letter`)
+- In class names, you can and should combine words if the context of the element requires it (e.g., a block with the class `user` may contain blocks with the classes `user-image` and `user-name`, and `user-name` may contain an element with the class `user-name-first-letter`).
     ```html
-    <!-- ✅ Правильно -->
+    <!-- ✅ Correct -->
     <div class="user">
       <img class="user-image" />
       <div class="user-name">
-        <span class="user-name-first-letter">А</span>лександр
+        <span class="user-name-first-letter">A</span>lexander
       </div>
     </div>
     ```
-- зачастую для имени класса лучше использовать существительные, в редких случаях – прилагательные, например, когда класс является неким модификатором компонента; глаголы же в качестве имени классов обычно не используют вовсе
+- Often, it's better to use nouns for class names, and in rare cases, adjectives when the class serves as a modifier of a component. Verbs are generally not used as class names.
     ```html
-  <!-- ❌ Неправильно -->
-  <a class="go-back">...</a>
-  <button class="submit">...</button>
-  <form class="create-user">...</form>
-  <div class="run-slider">...</div>
+    <!-- ❌ Incorrect -->
+    <a class="go-back">...</a>
+    <button class="submit">...</button>
+    <form class="create-user">...</form>
+    <div class="run-slider">...</div>
 
-  <!-- ✅ Правильно -->
-  <a class="go-back-link">...</a>
-  <button class="submit-button">...</button>
-  <form class="create-user-form">...</form>
-  <div class="slider">...</div>
+    <!-- ✅ Correct -->
+    <a class="go-back-link">...</a>
+    <button class="submit-button">...</button>
+    <form class="create-user-form">...</form>
+    <div class="slider">...</div>
 
-  <!-- ⚠️ Тоже правильно -->
-  <button class="button red wide bold">...</button>
-  <section class="section large-padding-y">...</section>
+    <!-- ⚠️ Also Correct -->
+    <button class="button red wide bold">...</button>
+    <section class="section large-padding-y">...</section>
     ```
-- существование абсолютно каждого класса в проекте должно быть оправдано: например, если у вас есть 5 абсолютно одинаковых по стилю секций, но с разным наполнением, то не стоит для каждой секции придумывать собственный класс, лучше обойтись одним унифицированным
+- Every class in the project should be justified. For example, if you have 5 sections that are absolutely identical in style but have different content, there is no need to invent a separate class for each section; it's better to use a unified class.
     ```html
-  <!-- ❌ Неправильно -->
-  <section class="banner">...</section>
-  <section class="features">...</section>
-  <section class="catalog">...</section>
-  <section class="about">...</section>
-  <section class="contacts">...</section>
-  <style>
-    .banner { padding-block: 30px }
-    .features { padding-block: 30px }
-    .catalog { padding-block: 30px }
-    .about { padding-block: 30px }
-    .contacts { padding-block: 30px }
-  </style>
+    <!-- ❌ Incorrect -->
+    <section class="banner">...</section>
+    <section class="features">...</section>
+    <section class="catalog">...</section>
+    <section class="about">...</section>
+    <section class="contacts">...</section>
+    <style>
+      .banner { padding-block: 30px }
+      .features { padding-block: 30px }
+      .catalog { padding-block: 30px }
+      .about { padding-block: 30px }
+      .contacts { padding-block: 30px }
+    </style>
 
-  <!-- ✅ Правильно -->
-  <section class="section">...</section>
-  <section class="section">...</section>
-  <section class="section">...</section>
-  <section class="section">...</section>
-  <section class="section">...</section>
-  <style>
-    .section { padding-block: 30px }
-  </style>
+    <!-- ✅ Correct -->
+    <section class="section">...</section>
+    <section class="section">...</section>
+    <section class="section">...</section>
+    <section class="section">...</section>
+    <section class="section">...</section>
+    <style>
+      .section { padding-block: 30px }
+    </style>
     ```
 
-## Структурные блоки с семантическими тегами
-- `page` — элемент `<html>` или `<body>`
-- `header` — элемент `<header>
-- `content`, `main` — элемент `<main>`
-- `footer` — элемент `<footer>`
-- `section` — элемент `<section>`
-- `aside`, `sidebar`, `widget` — элемент `<aside>`
-- `nav`, `menu`, `navigation` — элемент `<nav>`
+## Structural Blocks with Semantic Tags
+- `page` — `<html>` or `<body>`
+- `header` — `<header>`
+- `content`, `main` — `<main>`
+- `footer` — `<footer>`
+- `section` — `<section>`
+- `aside`, `sidebar`, `widget`
+— `<aside>`
+- `nav`, `menu`, `navigation` — `<nav>`
 
-## Структурные блоки с нейтральными тегами (div, span)
-- `inner`, `body` — вспомогательный элемент
-- `wrapper`, `wrap` — вспомогательный элемент-обертка
-- `container` — контейнер, ограничивающий ширину контентной части
-- `grid` — сетка а-ля таблица
-- `row` — строка в грид-сетке
-- `column`, `col`, `cel` — столбец (ячейка) в грид-сетке
+## Structural Blocks with Neutral Tags (div, span)
+- `inner`, `body` — auxiliary element
+- `wrapper`, `wrap` — auxiliary wrapper element
+- `container` — container limiting the width of the content
+- `grid` — table-like grid
+- `row` — row in a grid
+- `column`, `col`, `cel` — column (cell) in a grid
 
-## Списки
-- `list`, `items` — элементы `<ul>`, `<ol>` и `<dl>`
-- `item` — элемент `<li>`
+## Lists
+- `list`, `items` — `<ul>`, `<ol>`, and `<dl>` elements
+- `item` — `<li>` element
 
-## Карточки
-- `card` — элемент `<article>`
+## Cards
+- `card` — `<article>` element
 
-## Изображения
+## Images
 - `image`
 - `img`
 - `picture`
@@ -158,53 +159,53 @@
 - `logo`
 - `icon`
 
-## Текст
-- `title`, `subtitle`, `heading`, `subheading`, `headline`, `subject`, `caption`, `label` — элементы от `<h1>` до `<h6>`
-- `slogan`, `description`, `text` — слоганы и описания
-- `blockquote`, `quote` — цитаты
-- `copyright` — копирайт
-- `link` — ссылки
-- `code`, `snippet` — вставки кода
+## Text
+- `title`, `subtitle`, `heading`, `subheading`, `headline`, `subject`, `caption`, `label` — elements from `<h1>` to `<h6>`
+- `slogan`, `description`, `text` — slogans and descriptions
+- `blockquote`, `quote` — quotes
+- `copyright` — copyright
+- `link` — links
+- `code`, `snippet` — code snippets
 
-## Формы
-- `form` — элемент `<form>`
-- `form-group` — элемент `<fieldset>`
-- `form-group-name`, `form-group-title`, `form-group-label` — элемент `<legend>`
-- `form-item` — структурный элемент формы, оборачивающий элементы полей ввода
+## Forms
+- `form` — `<form>` element
+- `form-group` — `<fieldset>` element
+- `form-group-name`, `form-group-title`, `form-group-label` — `<legend>` element
+- `form-item` — structural form element wrapping input elements
 
-## Классические поля ввода
-- `field` — корневой элемент `<div>` компонента поля ввода
-- `field-label` — элемент `<label>`
-- `field-control` — элементы `<input />`, `<textarea>`, `<select>`
+## Classic Input Fields
+- `field` — root `<div>` element of an input field component
+- `field-label` — `<label>` element
+- `field-control` — `<input />`, `<textarea>`, `<select>` elements
 
-## Чекбоксы
-- `checkbox` — корневой элемент `<label>` компонента чекбокса
-- `checkbox-control` — элемент `<input />` компонента чекбокса
-- `checkbox-emulator` — элемент `<span>` компонента чекбокса для эмуляции "квадрата"
-- `checkbox-label` — элемент `<span>` компонента чекбокса для подписи
+## Checkboxes
+- `checkbox` — root `<label>` element of a checkbox component
+- `checkbox-control` — `<input />` element of a checkbox component
+- `checkbox-emulator` — `<span>` element of a checkbox component for emulating the "square"
+- `checkbox-label` — `<span>` element of a checkbox component for labeling
 
-## Радиокнопки
-- `radios` — корневой элемент `<fieldset>` компонента радиокнопок
-- `radios-label` — элемент `<legend>` компонента радиокнопок
+## Radio Buttons
+- `radios` — root `<fieldset>` element of a radio button component
+- `radios-label` — `<legend>` element of a radio button component
 
-## Разное
-- `button` — элемент `<button>`
-- `dropdown` — выпадающий список
-- `accordion`, `spoiler` — компонент "аккордеон"
-- `modal`, `popup` — модальное окно
-- `overlay`, `backdrop` — затемняющий фон (прим. под модальными окнами)
-- `tooltip`, `hint` — тултип, всплывающая подсказка
-- `slider`, `carousel` — слайдер
-- `pagination` — пагинация (горизонтальное меню с номерами страниц и стрелками влево-вправо)
-- `breadcrumbs` — "хлебные крошки" (навигация по иерархии веб-приложения, часто следует сразу после шапки страницы)
-- `basket`, `cart` — корзина
-- `summary`, `total`, `amount` — сумма чего-либо (прим. итоговая сумма заказа)
-- `search`, `quick-search` — форма поиска
-- `user` — элемент с данными о пользователе
-- `features`, `advantages`, `benefints` — элемент с перечислением каких-то особенностей / преимуществ товара или услуги
-- `socials`, `soc1als` — социальные сети
+## Miscellaneous
+- `button` — `<button>` element
+- `dropdown` — dropdown list
+- `accordion`, `spoiler` — accordion component
+- `modal`, `popup` — modal window
+- `overlay`, `backdrop` — darkening background (e.g., behind modal windows)
+- `tooltip`, `hint` — tooltip, popup hint
+- `slider`, `carousel` — slider
+- `pagination` — pagination (horizontal menu with page numbers and left-right arrows)
+- `breadcrumbs` — breadcrumb navigation (hierarchical navigation of a web application, often following the header)
+- `basket`, `cart` — shopping cart
+- `summary`, `total`, `amount` — sum of something (e.g., total order amount)
+- `search`, `quick-search` — search form
+- `user` — element with user data
+- `features`, `advantages`, `benefits` — element with a list of product or service features
+- `socials`, `soc1als` — social networks
 
-## Модификаторы размеров
+## Size Modifiers
 - `small`
 - `tiny`
 - `medium`
@@ -215,20 +216,20 @@
 - `narrow`
 - `wide`
 
-## Модификаторы наличия чего-либо
+## Presence Modifiers
 - `has-icon`
 - `has-error`
 - `has-underline`
 
-## Модификаторы состояний
-- `is-current` — текущий пункт меню
-- `is-active` — активная кнопка
-- `is-visible`, `is-shown` — видимый тултип
-- `is-hidden`, `hidden` — скрытая информация
-- `is-open` — открытое модальное окно
-- `is-expanded` — раскрытый выпадающий список
-- `is-invalid`, `is-error` — поле ввода с некорректными введенными данными
-- `warning` — предупреждение
-- `alert`, `notification` — уведомление
-- `success` — статус успешного выполнения чего-либо
-- `loading`, `processing`, `pending` — статус загрузки
+## State Modifiers
+- `is-current` — current menu item
+- `is-active` — active button
+- `is-visible`, `is-shown` — visible tooltip
+- `is-hidden`, `hidden` — hidden information
+- `is-open` — open modal window
+- `is-expanded` — expanded dropdown list
+- `is-invalid`, `is-error` — input field with incorrect input data
+- `warning` — warning
+- `alert`, `notification` — notification
+- `success` — success status of something
+- `loading`, `processing`, `pending` — loading status
